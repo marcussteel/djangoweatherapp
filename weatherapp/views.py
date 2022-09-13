@@ -9,6 +9,9 @@ def index(request):
     city = "Yozgat"
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     response = requests.get(url)
-    print(response)
+    content= response.json()
     return render(request, 'weatherapp/index.html')
+
+
+
 
